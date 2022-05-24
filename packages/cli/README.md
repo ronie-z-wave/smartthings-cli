@@ -96,155 +96,156 @@ Commands that use the SmartThings REST API are organized in topics
 that map to the API spec.
 
 <!-- commands -->
-* [`smartthings apps [ID]`](#smartthings-apps-id)
-* [`smartthings apps:authorize ARN`](#smartthings-appsauthorize-arn)
-* [`smartthings apps:create`](#smartthings-appscreate)
-* [`smartthings apps:delete [ID]`](#smartthings-appsdelete-id)
-* [`smartthings apps:oauth [ID]`](#smartthings-appsoauth-id)
-* [`smartthings apps:oauth:generate [ID]`](#smartthings-appsoauthgenerate-id)
-* [`smartthings apps:oauth:update [ID]`](#smartthings-appsoauthupdate-id)
-* [`smartthings apps:register [ID]`](#smartthings-appsregister-id)
-* [`smartthings apps:settings [ID]`](#smartthings-appssettings-id)
-* [`smartthings apps:settings:update [ID]`](#smartthings-appssettingsupdate-id)
-* [`smartthings apps:update [ID]`](#smartthings-appsupdate-id)
-* [`smartthings autocomplete [SHELL]`](#smartthings-autocomplete-shell)
-* [`smartthings capabilities [ID] [VERSION]`](#smartthings-capabilities-id-version)
-* [`smartthings capabilities:create`](#smartthings-capabilitiescreate)
-* [`smartthings capabilities:delete [ID] [VERSION]`](#smartthings-capabilitiesdelete-id-version)
-* [`smartthings capabilities:namespaces`](#smartthings-capabilitiesnamespaces)
-* [`smartthings capabilities:presentation [ID] [VERSION]`](#smartthings-capabilitiespresentation-id-version)
-* [`smartthings capabilities:presentation:create [ID] [VERSION]`](#smartthings-capabilitiespresentationcreate-id-version)
-* [`smartthings capabilities:presentation:update [ID] [VERSION]`](#smartthings-capabilitiespresentationupdate-id-version)
-* [`smartthings capabilities:translations [ID] [VERSION] [TAG]`](#smartthings-capabilitiestranslations-id-version-tag)
-* [`smartthings capabilities:translations:create [ID] [VERSION]`](#smartthings-capabilitiestranslationscreate-id-version)
-* [`smartthings capabilities:translations:update [ID] [VERSION]`](#smartthings-capabilitiestranslationsupdate-id-version)
-* [`smartthings capabilities:translations:upsert [ID] [VERSION]`](#smartthings-capabilitiestranslationsupsert-id-version)
-* [`smartthings capabilities:update [ID] [VERSION]`](#smartthings-capabilitiesupdate-id-version)
-* [`smartthings config [NAME]`](#smartthings-config-name)
-* [`smartthings config:reset`](#smartthings-configreset)
-* [`smartthings device-preferences [IDORINDEX]`](#smartthings-device-preferences-idorindex)
-* [`smartthings device-preferences:create`](#smartthings-device-preferencescreate)
-* [`smartthings device-preferences:update [ID]`](#smartthings-device-preferencesupdate-id)
-* [`smartthings device-profiles [ID]`](#smartthings-device-profiles-id)
-* [`smartthings device-profiles:create`](#smartthings-device-profilescreate)
-* [`smartthings device-profiles:delete [ID]`](#smartthings-device-profilesdelete-id)
-* [`smartthings device-profiles:device-config [ID]`](#smartthings-device-profilesdevice-config-id)
-* [`smartthings device-profiles:presentation [ID]`](#smartthings-device-profilespresentation-id)
-* [`smartthings device-profiles:publish [ID]`](#smartthings-device-profilespublish-id)
-* [`smartthings device-profiles:translations [ID] [TAG]`](#smartthings-device-profilestranslations-id-tag)
-* [`smartthings device-profiles:translations:delete [ID] [TAG]`](#smartthings-device-profilestranslationsdelete-id-tag)
-* [`smartthings device-profiles:translations:upsert [ID]`](#smartthings-device-profilestranslationsupsert-id)
-* [`smartthings device-profiles:update [ID]`](#smartthings-device-profilesupdate-id)
-* [`smartthings device-profiles:view [ID]`](#smartthings-device-profilesview-id)
-* [`smartthings device-profiles:view:create`](#smartthings-device-profilesviewcreate)
-* [`smartthings device-profiles:view:update [ID]`](#smartthings-device-profilesviewupdate-id)
-* [`smartthings devicepreferences [IDORINDEX]`](#smartthings-devicepreferences-idorindex)
-* [`smartthings devicepreferences:create`](#smartthings-devicepreferencescreate)
-* [`smartthings devicepreferences:translations [PREFERENCEID] [TAG]`](#smartthings-devicepreferencestranslations-preferenceid-tag)
-* [`smartthings devicepreferences:translations:create [PREFERENCEID]`](#smartthings-devicepreferencestranslationscreate-preferenceid)
-* [`smartthings devicepreferences:translations:update [PREFERENCEID]`](#smartthings-devicepreferencestranslationsupdate-preferenceid)
-* [`smartthings devicepreferences:update [ID]`](#smartthings-devicepreferencesupdate-id)
-* [`smartthings deviceprofiles [ID]`](#smartthings-deviceprofiles-id)
-* [`smartthings deviceprofiles:create`](#smartthings-deviceprofilescreate)
-* [`smartthings deviceprofiles:delete [ID]`](#smartthings-deviceprofilesdelete-id)
-* [`smartthings deviceprofiles:device-config [ID]`](#smartthings-deviceprofilesdevice-config-id)
-* [`smartthings deviceprofiles:presentation [ID]`](#smartthings-deviceprofilespresentation-id)
-* [`smartthings deviceprofiles:publish [ID]`](#smartthings-deviceprofilespublish-id)
-* [`smartthings deviceprofiles:translations [ID] [TAG]`](#smartthings-deviceprofilestranslations-id-tag)
-* [`smartthings deviceprofiles:translations:delete [ID] [TAG]`](#smartthings-deviceprofilestranslationsdelete-id-tag)
-* [`smartthings deviceprofiles:translations:upsert [ID]`](#smartthings-deviceprofilestranslationsupsert-id)
-* [`smartthings deviceprofiles:update [ID]`](#smartthings-deviceprofilesupdate-id)
-* [`smartthings deviceprofiles:view [ID]`](#smartthings-deviceprofilesview-id)
-* [`smartthings deviceprofiles:view:create`](#smartthings-deviceprofilesviewcreate)
-* [`smartthings deviceprofiles:view:update [ID]`](#smartthings-deviceprofilesviewupdate-id)
-* [`smartthings devices [ID]`](#smartthings-devices-id)
-* [`smartthings devices:capability-status [ID] [COMPONENT] [CAPABILITY]`](#smartthings-devicescapability-status-id-component-capability)
-* [`smartthings devices:commands [ID] [COMMAND]`](#smartthings-devicescommands-id-command)
-* [`smartthings devices:component-status [ID] [COMPONENT]`](#smartthings-devicescomponent-status-id-component)
-* [`smartthings devices:delete [ID]`](#smartthings-devicesdelete-id)
-* [`smartthings devices:health [ID]`](#smartthings-deviceshealth-id)
-* [`smartthings devices:preferences [ID]`](#smartthings-devicespreferences-id)
-* [`smartthings devices:presentation [ID]`](#smartthings-devicespresentation-id)
-* [`smartthings devices:rename [ID] [LABEL]`](#smartthings-devicesrename-id-label)
-* [`smartthings devices:status [ID]`](#smartthings-devicesstatus-id)
-* [`smartthings devices:update [ID]`](#smartthings-devicesupdate-id)
-* [`smartthings edge:channels [IDORINDEX]`](#smartthings-edgechannels-idorindex)
-* [`smartthings edge:channels:assign [DRIVERID] [VERSION]`](#smartthings-edgechannelsassign-driverid-version)
-* [`smartthings edge:channels:assignments [IDORINDEX]`](#smartthings-edgechannelsassignments-idorindex)
-* [`smartthings edge:channels:create`](#smartthings-edgechannelscreate)
-* [`smartthings edge:channels:delete [ID]`](#smartthings-edgechannelsdelete-id)
-* [`smartthings edge:channels:drivers [IDORINDEX]`](#smartthings-edgechannelsdrivers-idorindex)
-* [`smartthings edge:channels:enroll [HUBID]`](#smartthings-edgechannelsenroll-hubid)
-* [`smartthings edge:channels:enrollments [IDORINDEX]`](#smartthings-edgechannelsenrollments-idorindex)
-* [`smartthings edge:channels:invitations [IDORINDEX]`](#smartthings-edgechannelsinvitations-idorindex)
-* [`smartthings edge:channels:invitations:accept ID`](#smartthings-edgechannelsinvitationsaccept-id)
-* [`smartthings edge:channels:invitations:create`](#smartthings-edgechannelsinvitationscreate)
-* [`smartthings edge:channels:invitations:delete [ID]`](#smartthings-edgechannelsinvitationsdelete-id)
-* [`smartthings edge:channels:invitations:revoke [ID]`](#smartthings-edgechannelsinvitationsrevoke-id)
-* [`smartthings edge:channels:invites [IDORINDEX]`](#smartthings-edgechannelsinvites-idorindex)
-* [`smartthings edge:channels:invites:accept ID`](#smartthings-edgechannelsinvitesaccept-id)
-* [`smartthings edge:channels:invites:create`](#smartthings-edgechannelsinvitescreate)
-* [`smartthings edge:channels:invites:delete [ID]`](#smartthings-edgechannelsinvitesdelete-id)
-* [`smartthings edge:channels:invites:revoke [ID]`](#smartthings-edgechannelsinvitesrevoke-id)
-* [`smartthings edge:channels:metainfo [IDORINDEX]`](#smartthings-edgechannelsmetainfo-idorindex)
-* [`smartthings edge:channels:unassign [DRIVERID]`](#smartthings-edgechannelsunassign-driverid)
-* [`smartthings edge:channels:unenroll [HUBID]`](#smartthings-edgechannelsunenroll-hubid)
-* [`smartthings edge:channels:update [ID]`](#smartthings-edgechannelsupdate-id)
-* [`smartthings edge:drivers [IDORINDEX]`](#smartthings-edgedrivers-idorindex)
-* [`smartthings edge:drivers:delete [ID]`](#smartthings-edgedriversdelete-id)
-* [`smartthings edge:drivers:install [DRIVERID]`](#smartthings-edgedriversinstall-driverid)
-* [`smartthings edge:drivers:installed [IDORINDEX]`](#smartthings-edgedriversinstalled-idorindex)
-* [`smartthings edge:drivers:logcat [DRIVERID]`](#smartthings-edgedriverslogcat-driverid)
-* [`smartthings edge:drivers:package [PROJECTDIRECTORY]`](#smartthings-edgedriverspackage-projectdirectory)
-* [`smartthings edge:drivers:publish [DRIVERID] [VERSION]`](#smartthings-edgedriverspublish-driverid-version)
-* [`smartthings edge:drivers:uninstall [DRIVERID]`](#smartthings-edgedriversuninstall-driverid)
-* [`smartthings edge:drivers:unpublish [DRIVERID]`](#smartthings-edgedriversunpublish-driverid)
-* [`smartthings installedapps [ID]`](#smartthings-installedapps-id)
-* [`smartthings installedapps:delete [ID]`](#smartthings-installedappsdelete-id)
-* [`smartthings installedapps:rename [ID] [NAME]`](#smartthings-installedappsrename-id-name)
-* [`smartthings installedschema [ID]`](#smartthings-installedschema-id)
-* [`smartthings installedschema:delete [ID]`](#smartthings-installedschemadelete-id)
-* [`smartthings locations [IDORINDEX]`](#smartthings-locations-idorindex)
-* [`smartthings locations:create`](#smartthings-locationscreate)
-* [`smartthings locations:delete [ID]`](#smartthings-locationsdelete-id)
-* [`smartthings locations:rooms [IDORINDEX]`](#smartthings-locationsrooms-idorindex)
-* [`smartthings locations:rooms:create`](#smartthings-locationsroomscreate)
-* [`smartthings locations:rooms:delete [ID]`](#smartthings-locationsroomsdelete-id)
-* [`smartthings locations:rooms:update [ID]`](#smartthings-locationsroomsupdate-id)
-* [`smartthings locations:update [ID]`](#smartthings-locationsupdate-id)
-* [`smartthings logout`](#smartthings-logout)
-* [`smartthings organizations [ID]`](#smartthings-organizations-id)
-* [`smartthings organizations:current`](#smartthings-organizationscurrent)
-* [`smartthings plugins`](#smartthings-plugins)
-* [`smartthings plugins:install PLUGIN...`](#smartthings-pluginsinstall-plugin)
-* [`smartthings plugins:inspect PLUGIN...`](#smartthings-pluginsinspect-plugin)
-* [`smartthings plugins:install PLUGIN...`](#smartthings-pluginsinstall-plugin-1)
-* [`smartthings plugins:link PLUGIN`](#smartthings-pluginslink-plugin)
-* [`smartthings plugins:uninstall PLUGIN...`](#smartthings-pluginsuninstall-plugin)
-* [`smartthings plugins:uninstall PLUGIN...`](#smartthings-pluginsuninstall-plugin-1)
-* [`smartthings plugins:uninstall PLUGIN...`](#smartthings-pluginsuninstall-plugin-2)
-* [`smartthings plugins:update`](#smartthings-pluginsupdate)
-* [`smartthings presentation PRESENTATIONID [MANUFACTURERNAME]`](#smartthings-presentation-presentationid-manufacturername)
-* [`smartthings presentation:device-config PRESENTATIONID [MANUFACTURERNAME]`](#smartthings-presentationdevice-config-presentationid-manufacturername)
-* [`smartthings presentation:device-config:create`](#smartthings-presentationdevice-configcreate)
-* [`smartthings presentation:device-config:generate ID`](#smartthings-presentationdevice-configgenerate-id)
-* [`smartthings rooms [IDORINDEX]`](#smartthings-rooms-idorindex)
-* [`smartthings rooms:create`](#smartthings-roomscreate)
-* [`smartthings rooms:delete [ID]`](#smartthings-roomsdelete-id)
-* [`smartthings rooms:update [ID]`](#smartthings-roomsupdate-id)
-* [`smartthings rules [IDORINDEX]`](#smartthings-rules-idorindex)
-* [`smartthings rules:create`](#smartthings-rulescreate)
-* [`smartthings rules:delete [ID]`](#smartthings-rulesdelete-id)
-* [`smartthings rules:execute [ID]`](#smartthings-rulesexecute-id)
-* [`smartthings rules:update [ID]`](#smartthings-rulesupdate-id)
-* [`smartthings schema [ID]`](#smartthings-schema-id)
-* [`smartthings schema:authorize ARN`](#smartthings-schemaauthorize-arn)
-* [`smartthings schema:create`](#smartthings-schemacreate)
-* [`smartthings schema:delete [ID]`](#smartthings-schemadelete-id)
-* [`smartthings schema:regenerate [ID]`](#smartthings-schemaregenerate-id)
-* [`smartthings schema:update [ID]`](#smartthings-schemaupdate-id)
+* [`smartthings apps [ID]`](#smartthings-apps-id)<a name="1"></a>
+* [`smartthings apps:authorize ARN`](#smartthings-appsauthorize-arn)<a name="2"></a>
+* [`smartthings apps:create`](#smartthings-appscreate)<a name="3"></a>
+* [`smartthings apps:delete [ID]`](#smartthings-appsdelete-id)<a name="4"></a>
+* [`smartthings apps:oauth [ID]`](#smartthings-appsoauth-id)<a name="5"></a>
+* [`smartthings apps:oauth:generate [ID]`](#smartthings-appsoauthgenerate-id)<a name="6"></a>
+* [`smartthings apps:oauth:update [ID]`](#smartthings-appsoauthupdate-id)<a name="7"></a>
+* [`smartthings apps:register [ID]`](#smartthings-appsregister-id)<a name="8"></a>
+* [`smartthings apps:settings [ID]`](#smartthings-appssettings-id)<a name="9"></a>
+* [`smartthings apps:settings:update [ID]`](#smartthings-appssettingsupdate-id)<a name="10"></a>
+* [`smartthings apps:update [ID]`](#smartthings-appsupdate-id)<a name="11"></a>
+* [`smartthings autocomplete [SHELL]`](#smartthings-autocomplete-shell)<a name="12"></a>
+* [`smartthings capabilities [ID] [VERSION]`](#smartthings-capabilities-id-version)<a name="13"></a>
+* [`smartthings capabilities:create`](#smartthings-capabilitiescreate)<a name="14"></a>
+* [`smartthings capabilities:delete [ID] [VERSION]`](#smartthings-capabilitiesdelete-id-version)<a name="15"></a>
+* [`smartthings capabilities:namespaces`](#smartthings-capabilitiesnamespaces)<a name="16"></a>
+* [`smartthings capabilities:presentation [ID] [VERSION]`](#smartthings-capabilitiespresentation-id-version)<a name="17"></a>
+* [`smartthings capabilities:presentation:create [ID] [VERSION]`](#smartthings-capabilitiespresentationcreate-id-version)<a name="18"></a>
+* [`smartthings capabilities:presentation:update [ID] [VERSION]`](#smartthings-capabilitiespresentationupdate-id-version)<a name="19"></a>
+* [`smartthings capabilities:translations [ID] [VERSION] [TAG]`](#smartthings-capabilitiestranslations-id-version-tag)<a name="20"></a>
+* [`smartthings capabilities:translations:create [ID] [VERSION]`](#smartthings-capabilitiestranslationscreate-id-version)<a name="21"></a>
+* [`smartthings capabilities:translations:update [ID] [VERSION]`](#smartthings-capabilitiestranslationsupdate-id-version)<a name="22"></a>
+* [`smartthings capabilities:translations:upsert [ID] [VERSION]`](#smartthings-capabilitiestranslationsupsert-id-version)<a name="23"></a>
+* [`smartthings capabilities:update [ID] [VERSION]`](#smartthings-capabilitiesupdate-id-version)<a name="24"></a>
+* [`smartthings config [NAME]`](#smartthings-config-name)<a name="25"></a>
+* [`smartthings config:reset`](#smartthings-configreset)<a name="26"></a>
+* [`smartthings device-preferences [IDORINDEX]`](#smartthings-device-preferences-idorindex)<a name="27"></a>
+* [`smartthings device-preferences:create`](#smartthings-device-preferencescreate)<a name="28"></a>
+* [`smartthings device-preferences:update [ID]`](#smartthings-device-preferencesupdate-id)<a name="29"></a>
+* [`smartthings device-profiles [ID]`](#smartthings-device-profiles-id)<a name="30"></a>
+* [`smartthings device-profiles:create`](#smartthings-device-profilescreate)<a name="31"></a>
+* [`smartthings device-profiles:delete [ID]`](#smartthings-device-profilesdelete-id)<a name="32"></a>
+* [`smartthings device-profiles:device-config [ID]`](#smartthings-device-profilesdevice-config-id)<a name="33"></a>
+* [`smartthings device-profiles:presentation [ID]`](#smartthings-device-profilespresentation-id)<a name="34"></a>
+* [`smartthings device-profiles:publish [ID]`](#smartthings-device-profilespublish-id)<a name="35"></a>
+* [`smartthings device-profiles:translations [ID] [TAG]`](#smartthings-device-profilestranslations-id-tag)<a name="36"></a>
+* [`smartthings device-profiles:translations:delete [ID] [TAG]`](#smartthings-device-profilestranslationsdelete-id-tag)<a name="37"></a>
+* [`smartthings device-profiles:translations:upsert [ID]`](#smartthings-device-profilestranslationsupsert-id)<a name="38"></a>
+* [`smartthings device-profiles:update [ID]`](#smartthings-device-profilesupdate-id)<a name="39"></a>
+* [`smartthings device-profiles:view [ID]`](#smartthings-device-profilesview-id)<a name="40"></a>
+* [`smartthings device-profiles:view:create`](#smartthings-device-profilesviewcreate)<a name="41"></a>
+* [`smartthings device-profiles:view:update [ID]`](#smartthings-device-profilesviewupdate-id)<a name="42"></a>
+* [`smartthings devicepreferences [IDORINDEX]`](#smartthings-devicepreferences-idorindex)<a name="43"></a>
+* [`smartthings devicepreferences:create`](#smartthings-devicepreferencescreate)<a name="44"></a>
+* [`smartthings devicepreferences:translations [PREFERENCEID] [TAG]`](#smartthings-devicepreferencestranslations-preferenceid-tag)<a name="45"></a>
+* [`smartthings devicepreferences:translations:create [PREFERENCEID]`](#smartthings-devicepreferencestranslationscreate-preferenceid)<a name="46"></a>
+* [`smartthings devicepreferences:translations:update [PREFERENCEID]`](#smartthings-devicepreferencestranslationsupdate-preferenceid)<a name="47"></a>
+* [`smartthings devicepreferences:update [ID]`](#smartthings-devicepreferencesupdate-id)<a name="48"></a>
+* [`smartthings deviceprofiles [ID]`](#smartthings-deviceprofiles-id)<a name="49"></a>
+* [`smartthings deviceprofiles:create`](#smartthings-deviceprofilescreate)<a name="50"></a>
+* [`smartthings deviceprofiles:delete [ID]`](#smartthings-deviceprofilesdelete-id)<a name="51"></a>
+* [`smartthings deviceprofiles:device-config [ID]`](#smartthings-deviceprofilesdevice-config-id)<a name="52"></a>
+* [`smartthings deviceprofiles:presentation [ID]`](#smartthings-deviceprofilespresentation-id)<a name="53"></a>
+* [`smartthings deviceprofiles:publish [ID]`](#smartthings-deviceprofilespublish-id)<a name="54"></a>
+* [`smartthings deviceprofiles:translations [ID] [TAG]`](#smartthings-deviceprofilestranslations-id-tag)<a name="55"></a>
+* [`smartthings deviceprofiles:translations:delete [ID] [TAG]`](#smartthings-deviceprofilestranslationsdelete-id-tag)<a name="56"></a>
+* [`smartthings deviceprofiles:translations:upsert [ID]`](#smartthings-deviceprofilestranslationsupsert-id)<a name="57"></a>
+* [`smartthings deviceprofiles:update [ID]`](#smartthings-deviceprofilesupdate-id)<a name="58"></a>
+* [`smartthings deviceprofiles:view [ID]`](#smartthings-deviceprofilesview-id)<a name="59"></a>
+* [`smartthings deviceprofiles:view:create`](#smartthings-deviceprofilesviewcreate)<a name="60"></a>
+* [`smartthings deviceprofiles:view:update [ID]`](#smartthings-deviceprofilesviewupdate-id)<a name="61"></a>
+* [`smartthings devices [ID]`](#smartthings-devices-id)<a name="62"></a>
+* [`smartthings devices:capability-status [ID] [COMPONENT] [CAPABILITY]`](#smartthings-devicescapability-status-id-component-capability)<a name="63"></a>
+* [`smartthings devices:commands [ID] [COMMAND]`](#smartthings-devicescommands-id-command)<a name="64"></a>
+* [`smartthings devices:component-status [ID] [COMPONENT]`](#smartthings-devicescomponent-status-id-component)<a name="65"></a>
+* [`smartthings devices:delete [ID]`](#smartthings-devicesdelete-id)<a name="66"></a>
+* [`smartthings devices:health [ID]`](#smartthings-deviceshealth-id)<a name="67"></a>
+* [`smartthings devices:preferences [ID]`](#smartthings-devicespreferences-id)<a name="68"></a>
+* [`smartthings devices:presentation [ID]`](#smartthings-devicespresentation-id)<a name="69"></a>
+* [`smartthings devices:rename [ID] [LABEL]`](#smartthings-devicesrename-id-label)<a name="70"></a>
+* [`smartthings devices:status [ID]`](#smartthings-devicesstatus-id)<a name="71"></a>
+* [`smartthings devices:update [ID]`](#smartthings-devicesupdate-id)<a name="72"></a>
+* [`smartthings edge:channels [IDORINDEX]`](#smartthings-edgechannels-idorindex)<a name="73"></a>
+* [`smartthings edge:channels:assign [DRIVERID] [VERSION]`](#smartthings-edgechannelsassign-driverid-version)<a name="74"></a>
+* [`smartthings edge:channels:assignments [IDORINDEX]`](#smartthings-edgechannelsassignments-idorindex)<a name="75"></a>
+* [`smartthings edge:channels:create`](#smartthings-edgechannelscreate)<a name="76"></a>
+* [`smartthings edge:channels:delete [ID]`](#smartthings-edgechannelsdelete-id)<a name="77"></a>
+* [`smartthings edge:channels:drivers [IDORINDEX]`](#smartthings-edgechannelsdrivers-idorindex)<a name="78"></a>
+* [`smartthings edge:channels:enroll [HUBID]`](#smartthings-edgechannelsenroll-hubid)<a name="79"></a>
+* [`smartthings edge:channels:enrollments [IDORINDEX]`](#smartthings-edgechannelsenrollments-idorindex)<a name="80"></a>
+* [`smartthings edge:channels:invitations [IDORINDEX]`](#smartthings-edgechannelsinvitations-idorindex)<a name="81"></a>
+* [`smartthings edge:channels:invitations:accept ID`](#smartthings-edgechannelsinvitationsaccept-id)<a name="82"></a>
+* [`smartthings edge:channels:invitations:create`](#smartthings-edgechannelsinvitationscreate)<a name="83"></a>
+* [`smartthings edge:channels:invitations:delete [ID]`](#smartthings-edgechannelsinvitationsdelete-id)<a name="84"></a>
+* [`smartthings edge:channels:invitations:revoke [ID]`](#smartthings-edgechannelsinvitationsrevoke-id)<a name="85"></a>
+* [`smartthings edge:channels:invites [IDORINDEX]`](#smartthings-edgechannelsinvites-idorindex)<a name="86"></a>
+* [`smartthings edge:channels:invites:accept ID`](#smartthings-edgechannelsinvitesaccept-id)<a name="87"></a>
+* [`smartthings edge:channels:invites:create`](#smartthings-edgechannelsinvitescreate)<a name="88"></a>
+* [`smartthings edge:channels:invites:delete [ID]`](#smartthings-edgechannelsinvitesdelete-id)<a name="89"></a>
+* [`smartthings edge:channels:invites:revoke [ID]`](#smartthings-edgechannelsinvitesrevoke-id)<a name="90"></a>
+* [`smartthings edge:channels:metainfo [IDORINDEX]`](#smartthings-edgechannelsmetainfo-idorindex)<a name="91"></a>
+* [`smartthings edge:channels:unassign [DRIVERID]`](#smartthings-edgechannelsunassign-driverid)<a name="92"></a>
+* [`smartthings edge:channels:unenroll [HUBID]`](#smartthings-edgechannelsunenroll-hubid)<a name="93"></a>
+* [`smartthings edge:channels:update [ID]`](#smartthings-edgechannelsupdate-id)<a name="94"></a>
+* [`smartthings edge:drivers [IDORINDEX]`](#smartthings-edgedrivers-idorindex)<a name="95"></a>
+* [`smartthings edge:drivers:delete [ID]`](#smartthings-edgedriversdelete-id)<a name="96"></a>
+* [`smartthings edge:drivers:install [DRIVERID]`](#smartthings-edgedriversinstall-driverid)<a name="97"></a>
+* [`smartthings edge:drivers:installed [IDORINDEX]`](#smartthings-edgedriversinstalled-idorindex)<a name="98"></a>
+* [`smartthings edge:drivers:logcat [DRIVERID]`](#smartthings-edgedriverslogcat-driverid)<a name="99"></a>
+* [`smartthings edge:drivers:package [PROJECTDIRECTORY]`](#smartthings-edgedriverspackage-projectdirectory)<a name="100"></a>
+* [`smartthings edge:drivers:publish [DRIVERID] [VERSION]`](#smartthings-edgedriverspublish-driverid-version)<a name="101"></a>
+* [`smartthings edge:drivers:uninstall [DRIVERID]`](#smartthings-edgedriversuninstall-driverid)<a name="102"></a>
+* [`smartthings edge:drivers:unpublish [DRIVERID]`](#smartthings-edgedriversunpublish-driverid)<a name="103"></a>
+* [`smartthings installedapps [ID]`](#smartthings-installedapps-id)<a name="104"></a>
+* [`smartthings installedapps:delete [ID]`](#smartthings-installedappsdelete-id)<a name="105"></a>
+* [`smartthings installedapps:rename [ID] [NAME]`](#smartthings-installedappsrename-id-name)<a name="106"></a>
+* [`smartthings installedschema [ID]`](#smartthings-installedschema-id)<a name="107"></a>
+* [`smartthings installedschema:delete [ID]`](#smartthings-installedschemadelete-id)<a name="108"></a>
+* [`smartthings locations [IDORINDEX]`](#smartthings-locations-idorindex)<a name="109"></a>
+* [`smartthings locations:create`](#smartthings-locationscreate)<a name="110"></a>
+* [`smartthings locations:delete [ID]`](#smartthings-locationsdelete-id)<a name="111"></a>
+* [`smartthings locations:rooms [IDORINDEX]`](#smartthings-locationsrooms-idorindex)<a name="112"></a>
+* [`smartthings locations:rooms:create`](#smartthings-locationsroomscreate)<a name="113"></a>
+* [`smartthings locations:rooms:delete [ID]`](#smartthings-locationsroomsdelete-id)<a name="114"></a>
+* [`smartthings locations:rooms:update [ID]`](#smartthings-locationsroomsupdate-id)<a name="115"></a>
+* [`smartthings locations:update [ID]`](#smartthings-locationsupdate-id)<a name="116"></a>
+* [`smartthings logout`](#smartthings-logout)<a name="117"></a>
+* [`smartthings organizations [ID]`](#smartthings-organizations-id)<a name="118"></a>
+* [`smartthings organizations:current`](#smartthings-organizationscurrent)<a name="119"></a>
+* [`smartthings plugins`](#smartthings-plugins)<a name="120"></a>
+* [`smartthings plugins:install PLUGIN...`](#smartthings-pluginsinstall-plugin)<a name="121"></a>
+* [`smartthings plugins:inspect PLUGIN...`](#smartthings-pluginsinspect-plugin)<a name="122"></a>
+* [`smartthings plugins:install PLUGIN...`](#smartthings-pluginsinstall-plugin-1)<a name="123"></a>
+* [`smartthings plugins:link PLUGIN`](#smartthings-pluginslink-plugin)<a name="124"></a>
+* [`smartthings plugins:uninstall PLUGIN...`](#smartthings-pluginsuninstall-plugin)<a name="125"></a>
+* [`smartthings plugins:uninstall PLUGIN...`](#smartthings-pluginsuninstall-plugin-1)<a name="126"></a>
+* [`smartthings plugins:uninstall PLUGIN...`](#smartthings-pluginsuninstall-plugin-2)<a name="127"></a>
+* [`smartthings plugins:update`](#smartthings-pluginsupdate)<a name="128"></a>
+* [`smartthings presentation PRESENTATIONID [MANUFACTURERNAME]`](#smartthings-presentation-presentationid-manufacturername)<a name="129"></a>
+* [`smartthings presentation:device-config PRESENTATIONID [MANUFACTURERNAME]`](#smartthings-presentationdevice-config-presentationid-manufacturername)<a name="130"></a>
+* [`smartthings presentation:device-config:create`](#smartthings-presentationdevice-configcreate)<a name="131"></a>
+* [`smartthings presentation:device-config:generate ID`](#smartthings-presentationdevice-configgenerate-id)<a name="132"></a>
+* [`smartthings rooms [IDORINDEX]`](#smartthings-rooms-idorindex)<a name="133"></a>
+* [`smartthings rooms:create`](#smartthings-roomscreate)<a name="134"></a>
+* [`smartthings rooms:delete [ID]`](#smartthings-roomsdelete-id)<a name="135"></a>
+* [`smartthings rooms:update [ID]`](#smartthings-roomsupdate-id)<a name="136"></a>
+* [`smartthings rules [IDORINDEX]`](#smartthings-rules-idorindex)<a name="137"></a>
+* [`smartthings rules:create`](#smartthings-rulescreate)<a name="138"></a>
+* [`smartthings rules:delete [ID]`](#smartthings-rulesdelete-id)<a name="139"></a>
+* [`smartthings rules:execute [ID]`](#smartthings-rulesexecute-id)<a name="140"></a>
+* [`smartthings rules:update [ID]`](#smartthings-rulesupdate-id)<a name="141"></a>
+* [`smartthings schema [ID]`](#smartthings-schema-id)<a name="142"></a>
+* [`smartthings schema:authorize ARN`](#smartthings-schemaauthorize-arn)<a name="143"></a>
+* [`smartthings schema:create`](#smartthings-schemacreate)<a name="144"></a>
+* [`smartthings schema:delete [ID]`](#smartthings-schemadelete-id)<a name="145"></a>
+* [`smartthings schema:regenerate [ID]`](#smartthings-schemaregenerate-id)<a name="146"></a>
+* [`smartthings schema:update [ID]`](#smartthings-schemaupdate-id)<a name="147"></a>
 
 ## `smartthings apps [ID]`
+[`Back to Commands`](#1)
 
 get a specific app or a list of apps
 
@@ -276,6 +277,7 @@ DESCRIPTION
 _See code: [src/commands/apps.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/apps.ts)_
 
 ## `smartthings apps:authorize ARN`
+[`Back to Commands`](#2)
 
 authorize calls to your AWS Lambda function from SmartThings
 
@@ -318,6 +320,7 @@ EXAMPLES
 _See code: [src/commands/apps/authorize.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/apps/authorize.ts)_
 
 ## `smartthings apps:create`
+[`Back to Commands`](#3)
 
 create an app
 
@@ -347,6 +350,7 @@ DESCRIPTION
 _See code: [src/commands/apps/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/apps/create.ts)_
 
 ## `smartthings apps:delete [ID]`
+[`Back to Commands`](#5)
 
 delete the app
 
@@ -370,6 +374,7 @@ DESCRIPTION
 _See code: [src/commands/apps/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/apps/delete.ts)_
 
 ## `smartthings apps:oauth [ID]`
+[`Back to Commands`](#5)
 
 get OAuth information for the app
 
@@ -396,6 +401,7 @@ DESCRIPTION
 _See code: [src/commands/apps/oauth.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/apps/oauth.ts)_
 
 ## `smartthings apps:oauth:generate [ID]`
+[`Back to Commands`](#6)
 
 regenerate the OAuth clientId and clientSecret of an app
 
@@ -425,6 +431,7 @@ DESCRIPTION
 _See code: [src/commands/apps/oauth/generate.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/apps/oauth/generate.ts)_
 
 ## `smartthings apps:oauth:update [ID]`
+[`Back to Commands`](#7)
 
 update the OAuth settings of the app
 
@@ -454,6 +461,7 @@ DESCRIPTION
 _See code: [src/commands/apps/oauth/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/apps/oauth/update.ts)_
 
 ## `smartthings apps:register [ID]`
+[`Back to Commands`](#8)
 
 send request to app target URL to confirm existence and authorize lifecycle events
 
@@ -477,6 +485,7 @@ DESCRIPTION
 _See code: [src/commands/apps/register.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/apps/register.ts)_
 
 ## `smartthings apps:settings [ID]`
+[`Back to Commands`](#9)
 
 get the settings of the app
 
@@ -503,6 +512,7 @@ DESCRIPTION
 _See code: [src/commands/apps/settings.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/apps/settings.ts)_
 
 ## `smartthings apps:settings:update [ID]`
+[`Back to Commands`](#10)
 
 update the settings of the app
 
@@ -532,6 +542,7 @@ DESCRIPTION
 _See code: [src/commands/apps/settings/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/apps/settings/update.ts)_
 
 ## `smartthings apps:update [ID]`
+[`Back to Commands`](#11)
 
 update the settings of the app
 
@@ -564,6 +575,7 @@ DESCRIPTION
 _See code: [src/commands/apps/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/apps/update.ts)_
 
 ## `smartthings autocomplete [SHELL]`
+[`Back to Commands`](#12)
 
 display autocomplete installation instructions
 
@@ -593,6 +605,7 @@ EXAMPLES
 _See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v1.2.0/src/commands/autocomplete/index.ts)_
 
 ## `smartthings capabilities [ID] [VERSION]`
+[`Back to Commands`](#13)
 
 get a specific capability
 
@@ -625,6 +638,7 @@ DESCRIPTION
 _See code: [src/commands/capabilities.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities.ts)_
 
 ## `smartthings capabilities:create`
+[`Back to Commands`](#14)
 
 create a capability for a user
 
@@ -653,6 +667,7 @@ DESCRIPTION
 _See code: [src/commands/capabilities/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities/create.ts)_
 
 ## `smartthings capabilities:delete [ID] [VERSION]`
+[`Back to Commands`](#15)
 
 delete a capability
 
@@ -678,6 +693,7 @@ DESCRIPTION
 _See code: [src/commands/capabilities/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities/delete.ts)_
 
 ## `smartthings capabilities:namespaces`
+[`Back to Commands`](#16)
 
 list all capability namespaces currently available in a user account
 
@@ -703,6 +719,7 @@ DESCRIPTION
 _See code: [src/commands/capabilities/namespaces.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities/namespaces.ts)_
 
 ## `smartthings capabilities:presentation [ID] [VERSION]`
+[`Back to Commands`](#17)
 
 get presentation information for a specific capability
 
@@ -733,6 +750,7 @@ DESCRIPTION
 _See code: [src/commands/capabilities/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities/presentation.ts)_
 
 ## `smartthings capabilities:presentation:create [ID] [VERSION]`
+[`Back to Commands`](#18)
 
 create presentation model for a capability
 
@@ -764,6 +782,7 @@ DESCRIPTION
 _See code: [src/commands/capabilities/presentation/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities/presentation/create.ts)_
 
 ## `smartthings capabilities:presentation:update [ID] [VERSION]`
+[`Back to Commands`](#18)
 
 update presentation information of a capability
 
@@ -795,6 +814,7 @@ DESCRIPTION
 _See code: [src/commands/capabilities/presentation/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities/presentation/update.ts)_
 
 ## `smartthings capabilities:translations [ID] [VERSION] [TAG]`
+[`Back to Commands`](#19)
 
 get list of locales supported by the capability
 
@@ -954,6 +974,7 @@ EXAMPLES
 _See code: [src/commands/capabilities/translations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities/translations.ts)_
 
 ## `smartthings capabilities:translations:create [ID] [VERSION]`
+[`Back to Commands`](#20)
 
 create a capability translation
 
@@ -1078,6 +1099,7 @@ EXAMPLES
 _See code: [src/commands/capabilities/translations/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities/translations/create.ts)_
 
 ## `smartthings capabilities:translations:update [ID] [VERSION]`
+[`Back to Commands`](#21)
 
 update a capability translation
 
@@ -1202,6 +1224,7 @@ EXAMPLES
 _See code: [src/commands/capabilities/translations/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities/translations/update.ts)_
 
 ## `smartthings capabilities:translations:upsert [ID] [VERSION]`
+[`Back to Commands`](#22)
 
 create or update a capability translation
 
@@ -1326,6 +1349,7 @@ EXAMPLES
 _See code: [src/commands/capabilities/translations/upsert.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities/translations/upsert.ts)_
 
 ## `smartthings capabilities:update [ID] [VERSION]`
+[`Back to Commands`](#23)
 
 update a capability
 
@@ -1357,6 +1381,7 @@ DESCRIPTION
 _See code: [src/commands/capabilities/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/capabilities/update.ts)_
 
 ## `smartthings config [NAME]`
+[`Back to Commands`](#24)
 
 list config file entries
 
@@ -1382,6 +1407,7 @@ DESCRIPTION
 _See code: [src/commands/config.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/config.ts)_
 
 ## `smartthings config:reset`
+[`Back to Commands`](#25)
 
 clear saved answers to questions
 
@@ -1403,6 +1429,7 @@ DESCRIPTION
 _See code: [src/commands/config/reset.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/config/reset.ts)_
 
 ## `smartthings device-preferences [IDORINDEX]`
+[`Back to Commands`](#26)
 
 list device preferences or get information for a specific device preference
 
@@ -1446,6 +1473,7 @@ EXAMPLES
 ```
 
 ## `smartthings device-preferences:create`
+[`Back to Commands`](#27)
 
 create a device preference
 
@@ -1491,6 +1519,7 @@ EXAMPLES
 ```
 
 ## `smartthings device-preferences:update [ID]`
+[`Back to Commands`](#28)
 
 update a device preference
 
@@ -1527,6 +1556,7 @@ EXAMPLES
 ```
 
 ## `smartthings device-profiles [ID]`
+[`Back to Commands`](#29)
 
 list all device profiles available in a user account or retrieve a single profile
 
@@ -1571,6 +1601,7 @@ EXAMPLES
 ```
 
 ## `smartthings device-profiles:create`
+[`Back to Commands`](#30)
 
 Create a new device profile
 
@@ -1612,6 +1643,7 @@ EXAMPLES
 ```
 
 ## `smartthings device-profiles:delete [ID]`
+[`Back to Commands`](#31)
 
 delete a device profile
 
@@ -1642,6 +1674,7 @@ EXAMPLES
 ```
 
 ## `smartthings device-profiles:device-config [ID]`
+[`Back to Commands`](#32)
 
 get the device configuration associated with a device profile
 
@@ -1671,6 +1704,7 @@ ALIASES
 ```
 
 ## `smartthings device-profiles:presentation [ID]`
+[`Back to Commands`](#33)
 
 get the presentation associated with a device profile
 
@@ -1717,6 +1751,7 @@ EXAMPLES
 ```
 
 ## `smartthings device-profiles:publish [ID]`
+[`Back to Commands`](#34)
 
 publish a device profile (published profiles cannot be modified)
 
@@ -1746,6 +1781,7 @@ ALIASES
 ```
 
 ## `smartthings device-profiles:translations [ID] [TAG]`
+[`Back to Commands`](#35)
 
 Get list of locales supported by the device profiles
 
@@ -1878,6 +1914,7 @@ EXAMPLES
 ```
 
 ## `smartthings device-profiles:translations:delete [ID] [TAG]`
+[`Back to Commands`](#36)
 
 delete a device profile translation
 
@@ -1944,6 +1981,7 @@ EXAMPLES
 ```
 
 ## `smartthings device-profiles:translations:upsert [ID]`
+[`Back to Commands`](#37)
 
 create or update a device profile translation
 
@@ -2040,6 +2078,7 @@ EXAMPLES
 ```
 
 ## `smartthings device-profiles:update [ID]`
+[`Back to Commands`](#38)
 
 update a device profile
 
@@ -2071,6 +2110,7 @@ ALIASES
 ```
 
 ## `smartthings device-profiles:view [ID]`
+[`Back to Commands`](#39)
 
 show device profile and device configuration in a single, consolidated view
 
@@ -2100,6 +2140,7 @@ ALIASES
 ```
 
 ## `smartthings device-profiles:view:create`
+[`Back to Commands`](#40)
 
 create a new device profile and device configuration
 
@@ -2175,6 +2216,7 @@ EXAMPLES
 ```
 
 ## `smartthings device-profiles:view:update [ID]`
+[`Back to Commands`](#41)
 
 update a device profile and configuration
 
@@ -2259,6 +2301,7 @@ EXAMPLES
 ```
 
 ## `smartthings devicepreferences [IDORINDEX]`
+[`Back to Commands`](#42)
 
 list device preferences or get information for a specific device preference
 
@@ -2304,6 +2347,7 @@ EXAMPLES
 _See code: [src/commands/devicepreferences.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devicepreferences.ts)_
 
 ## `smartthings devicepreferences:create`
+[`Back to Commands`](#43)
 
 create a device preference
 
@@ -2351,6 +2395,7 @@ EXAMPLES
 _See code: [src/commands/devicepreferences/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devicepreferences/create.ts)_
 
 ## `smartthings devicepreferences:translations [PREFERENCEID] [TAG]`
+[`Back to Commands`](#44)
 
 get translated device preference values in a desired locale
 
@@ -2393,6 +2438,7 @@ EXAMPLES
 _See code: [src/commands/devicepreferences/translations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devicepreferences/translations.ts)_
 
 ## `smartthings devicepreferences:translations:create [PREFERENCEID]`
+[`Back to Commands`](#45)
 
 create a device preference translation
 
@@ -2426,6 +2472,7 @@ EXAMPLES
 _See code: [src/commands/devicepreferences/translations/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devicepreferences/translations/create.ts)_
 
 ## `smartthings devicepreferences:translations:update [PREFERENCEID]`
+[`Back to Commands`](#46)
 
 update a device preference translation
 
@@ -2459,6 +2506,7 @@ EXAMPLES
 _See code: [src/commands/devicepreferences/translations/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devicepreferences/translations/update.ts)_
 
 ## `smartthings devicepreferences:update [ID]`
+[`Back to Commands`](#47)
 
 update a device preference
 
@@ -2497,6 +2545,7 @@ EXAMPLES
 _See code: [src/commands/devicepreferences/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devicepreferences/update.ts)_
 
 ## `smartthings deviceprofiles [ID]`
+[`Back to Commands`](#48)
 
 list all device profiles available in a user account or retrieve a single profile
 
@@ -2543,6 +2592,7 @@ EXAMPLES
 _See code: [src/commands/deviceprofiles.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles.ts)_
 
 ## `smartthings deviceprofiles:create`
+[`Back to Commands`](#49)
 
 Create a new device profile
 
@@ -2586,6 +2636,7 @@ EXAMPLES
 _See code: [src/commands/deviceprofiles/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/create.ts)_
 
 ## `smartthings deviceprofiles:delete [ID]`
+[`Back to Commands`](#50)
 
 delete a device profile
 
@@ -2618,6 +2669,7 @@ EXAMPLES
 _See code: [src/commands/deviceprofiles/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/delete.ts)_
 
 ## `smartthings deviceprofiles:device-config [ID]`
+[`Back to Commands`](#51)
 
 get the device configuration associated with a device profile
 
@@ -2649,6 +2701,7 @@ ALIASES
 _See code: [src/commands/deviceprofiles/device-config.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/device-config.ts)_
 
 ## `smartthings deviceprofiles:presentation [ID]`
+[`Back to Commands`](#52)
 
 get the presentation associated with a device profile
 
@@ -2697,6 +2750,7 @@ EXAMPLES
 _See code: [src/commands/deviceprofiles/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/presentation.ts)_
 
 ## `smartthings deviceprofiles:publish [ID]`
+[`Back to Commands`](#53)
 
 publish a device profile (published profiles cannot be modified)
 
@@ -2728,6 +2782,7 @@ ALIASES
 _See code: [src/commands/deviceprofiles/publish.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/publish.ts)_
 
 ## `smartthings deviceprofiles:translations [ID] [TAG]`
+[`Back to Commands`](#54)
 
 Get list of locales supported by the device profiles
 
@@ -2862,6 +2917,7 @@ EXAMPLES
 _See code: [src/commands/deviceprofiles/translations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/translations.ts)_
 
 ## `smartthings deviceprofiles:translations:delete [ID] [TAG]`
+[`Back to Commands`](#55)
 
 delete a device profile translation
 
@@ -2930,6 +2986,7 @@ EXAMPLES
 _See code: [src/commands/deviceprofiles/translations/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/translations/delete.ts)_
 
 ## `smartthings deviceprofiles:translations:upsert [ID]`
+[`Back to Commands`](#56)
 
 create or update a device profile translation
 
@@ -3028,6 +3085,7 @@ EXAMPLES
 _See code: [src/commands/deviceprofiles/translations/upsert.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/translations/upsert.ts)_
 
 ## `smartthings deviceprofiles:update [ID]`
+[`Back to Commands`](#57)
 
 update a device profile
 
@@ -3061,6 +3119,7 @@ ALIASES
 _See code: [src/commands/deviceprofiles/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/update.ts)_
 
 ## `smartthings deviceprofiles:view [ID]`
+[`Back to Commands`](#58)
 
 show device profile and device configuration in a single, consolidated view
 
@@ -3092,6 +3151,7 @@ ALIASES
 _See code: [src/commands/deviceprofiles/view.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/view.ts)_
 
 ## `smartthings deviceprofiles:view:create`
+[`Back to Commands`](#59)
 
 create a new device profile and device configuration
 
@@ -3169,6 +3229,7 @@ EXAMPLES
 _See code: [src/commands/deviceprofiles/view/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/view/create.ts)_
 
 ## `smartthings deviceprofiles:view:update [ID]`
+[`Back to Commands`](#60)
 
 update a device profile and configuration
 
@@ -3255,6 +3316,7 @@ EXAMPLES
 _See code: [src/commands/deviceprofiles/view/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/deviceprofiles/view/update.ts)_
 
 ## `smartthings devices [ID]`
+[`Back to Commands`](#61)
 
 list all devices available in a user account or retrieve a single device
 
@@ -3294,6 +3356,7 @@ DESCRIPTION
 _See code: [src/commands/devices.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devices.ts)_
 
 ## `smartthings devices:capability-status [ID] [COMPONENT] [CAPABILITY]`
+[`Back to Commands`](#62)
 
 get the current status of all of a device capability's attributes
 
@@ -3323,6 +3386,7 @@ DESCRIPTION
 _See code: [src/commands/devices/capability-status.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devices/capability-status.ts)_
 
 ## `smartthings devices:commands [ID] [COMMAND]`
+[`Back to Commands`](#63)
 
 execute a device command
 
@@ -3351,6 +3415,7 @@ DESCRIPTION
 _See code: [src/commands/devices/commands.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devices/commands.ts)_
 
 ## `smartthings devices:component-status [ID] [COMPONENT]`
+[`Back to Commands`](#64)
 
 get the current status of a device component's attributes
 
@@ -3379,6 +3444,7 @@ DESCRIPTION
 _See code: [src/commands/devices/component-status.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devices/component-status.ts)_
 
 ## `smartthings devices:delete [ID]`
+[`Back to Commands`](#65)
 
 delete a device
 
@@ -3402,6 +3468,7 @@ DESCRIPTION
 _See code: [src/commands/devices/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devices/delete.ts)_
 
 ## `smartthings devices:health [ID]`
+[`Back to Commands`](#66)
 
 get the current health status of a device
 
@@ -3428,6 +3495,7 @@ DESCRIPTION
 _See code: [src/commands/devices/health.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devices/health.ts)_
 
 ## `smartthings devices:preferences [ID]`
+[`Back to Commands`](#67)
 
 get the current preferences of a device
 
@@ -3454,6 +3522,7 @@ DESCRIPTION
 _See code: [src/commands/devices/preferences.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devices/preferences.ts)_
 
 ## `smartthings devices:presentation [ID]`
+[`Back to Commands`](#68)
 
 get a device presentation
 
@@ -3480,6 +3549,7 @@ DESCRIPTION
 _See code: [src/commands/devices/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devices/presentation.ts)_
 
 ## `smartthings devices:rename [ID] [LABEL]`
+[`Back to Commands`](#69)
 
 rename a device
 
@@ -3508,6 +3578,7 @@ DESCRIPTION
 _See code: [src/commands/devices/rename.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devices/rename.ts)_
 
 ## `smartthings devices:status [ID]`
+[`Back to Commands`](#70)
 
 get the current status of all of a device's component's attributes
 
@@ -3534,6 +3605,7 @@ DESCRIPTION
 _See code: [src/commands/devices/status.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devices/status.ts)_
 
 ## `smartthings devices:update [ID]`
+[`Back to Commands`](#71)
 
 get the current status of all of a device's component's attributes
 
@@ -3563,6 +3635,7 @@ DESCRIPTION
 _See code: [src/commands/devices/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/devices/update.ts)_
 
 ## `smartthings edge:channels [IDORINDEX]`
+[`Back to Commands`](#72)
 
 list all channels owned by you or retrieve a single channel
 
@@ -3607,6 +3680,7 @@ EXAMPLES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels.ts)_
 
 ## `smartthings edge:channels:assign [DRIVERID] [VERSION]`
+[`Back to Commands`](#73)
 
 assign a driver to a channel
 
@@ -3637,6 +3711,7 @@ ALIASES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/assign.ts)_
 
 ## `smartthings edge:channels:assignments [IDORINDEX]`
+[`Back to Commands`](#74)
 
 list all drivers assigned to a given channel
 
@@ -3666,6 +3741,7 @@ ALIASES
 ```
 
 ## `smartthings edge:channels:create`
+[`Back to Commands`](#75)
 
 create a channel
 
@@ -3693,6 +3769,7 @@ DESCRIPTION
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/create.ts)_
 
 ## `smartthings edge:channels:delete [ID]`
+[`Back to Commands`](#76)
 
 delete a channel
 
@@ -3717,6 +3794,7 @@ DESCRIPTION
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/delete.ts)_
 
 ## `smartthings edge:channels:drivers [IDORINDEX]`
+[`Back to Commands`](#77)
 
 list all drivers assigned to a given channel
 
@@ -3748,6 +3826,7 @@ ALIASES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/drivers.ts)_
 
 ## `smartthings edge:channels:enroll [HUBID]`
+[`Back to Commands`](#78)
 
 enroll a hub in a channel
 
@@ -3774,6 +3853,7 @@ DESCRIPTION
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/enroll.ts)_
 
 ## `smartthings edge:channels:enrollments [IDORINDEX]`
+[`Back to Commands`](#79)
 
 list all channels a given hub is enrolled in
 
@@ -3802,6 +3882,7 @@ DESCRIPTION
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/enrollments.ts)_
 
 ## `smartthings edge:channels:invitations [IDORINDEX]`
+[`Back to Commands`](#80)
 
 list invitations or retrieve a single invitation by id or index
 
@@ -3841,6 +3922,7 @@ EXAMPLES
 ```
 
 ## `smartthings edge:channels:invitations:accept ID`
+[`Back to Commands`](#81)
 
 accept a channel invitation
 
@@ -3866,6 +3948,7 @@ ALIASES
 ```
 
 ## `smartthings edge:channels:invitations:create`
+[`Back to Commands`](#82)
 
 create an invitation
 
@@ -3895,6 +3978,7 @@ ALIASES
 ```
 
 ## `smartthings edge:channels:invitations:delete [ID]`
+[`Back to Commands`](#83)
 
 delete a channel invitation
 
@@ -3924,6 +4008,7 @@ ALIASES
 ```
 
 ## `smartthings edge:channels:invitations:revoke [ID]`
+[`Back to Commands`](#84)
 
 delete a channel invitation
 
@@ -3953,6 +4038,7 @@ ALIASES
 ```
 
 ## `smartthings edge:channels:invites [IDORINDEX]`
+[`Back to Commands`](#85)
 
 list invitations or retrieve a single invitation by id or index
 
@@ -3994,6 +4080,7 @@ EXAMPLES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/invites.ts)_
 
 ## `smartthings edge:channels:invites:accept ID`
+[`Back to Commands`](#86)
 
 accept a channel invitation
 
@@ -4021,6 +4108,7 @@ ALIASES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/invites/accept.ts)_
 
 ## `smartthings edge:channels:invites:create`
+[`Back to Commands`](#87)
 
 create an invitation
 
@@ -4052,6 +4140,7 @@ ALIASES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/invites/create.ts)_
 
 ## `smartthings edge:channels:invites:delete [ID]`
+[`Back to Commands`](#88)
 
 delete a channel invitation
 
@@ -4083,6 +4172,7 @@ ALIASES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/invites/delete.ts)_
 
 ## `smartthings edge:channels:invites:revoke [ID]`
+[`Back to Commands`](#89)
 
 delete a channel invitation
 
@@ -4112,6 +4202,7 @@ ALIASES
 ```
 
 ## `smartthings edge:channels:metainfo [IDORINDEX]`
+[`Back to Commands`](#90)
 
 list all channels owned by you or retrieve a single channel
 
@@ -4154,6 +4245,7 @@ EXAMPLES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/metainfo.ts)_
 
 ## `smartthings edge:channels:unassign [DRIVERID]`
+[`Back to Commands`](#91)
 
 remove a driver from a channel
 
@@ -4183,6 +4275,7 @@ ALIASES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/unassign.ts)_
 
 ## `smartthings edge:channels:unenroll [HUBID]`
+[`Back to Commands`](#92)
 
 unenroll a hub from a channel
 
@@ -4209,6 +4302,7 @@ DESCRIPTION
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/unenroll.ts)_
 
 ## `smartthings edge:channels:update [ID]`
+[`Back to Commands`](#93)
 
 update a channel
 
@@ -4239,6 +4333,7 @@ DESCRIPTION
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/channels/update.ts)_
 
 ## `smartthings edge:drivers [IDORINDEX]`
+[`Back to Commands`](#94)
 
 list all drivers owned by you or retrieve a single driver
 
@@ -4288,6 +4383,7 @@ EXAMPLES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/drivers.ts)_
 
 ## `smartthings edge:drivers:delete [ID]`
+[`Back to Commands`](#95)
 
 delete an edge driver
 
@@ -4312,6 +4408,7 @@ DESCRIPTION
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/drivers/delete.ts)_
 
 ## `smartthings edge:drivers:install [DRIVERID]`
+[`Back to Commands`](#96)
 
 install an edge driver onto a hub
 
@@ -4346,6 +4443,7 @@ EXAMPLES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/drivers/install.ts)_
 
 ## `smartthings edge:drivers:installed [IDORINDEX]`
+[`Back to Commands`](#97)
 
 list all drivers installed on a given hub
 
@@ -4375,6 +4473,7 @@ DESCRIPTION
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/drivers/installed.ts)_
 
 ## `smartthings edge:drivers:logcat [DRIVERID]`
+[`Back to Commands`](#98)
 
 stream logs from installed drivers
 
@@ -4402,6 +4501,7 @@ DESCRIPTION
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/drivers/logcat.ts)_
 
 ## `smartthings edge:drivers:package [PROJECTDIRECTORY]`
+[`Back to Commands`](#99)
 
 build and upload an edge package
 
@@ -4456,6 +4556,7 @@ EXAMPLES
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/drivers/package.ts)_
 
 ## `smartthings edge:drivers:publish [DRIVERID] [VERSION]`
+[`Back to Commands`](#100)
 
 assign a driver to a channel
 
@@ -4484,6 +4585,7 @@ ALIASES
 ```
 
 ## `smartthings edge:drivers:uninstall [DRIVERID]`
+[`Back to Commands`](#101)
 
 uninstall an edge driver from a hub
 
@@ -4510,6 +4612,7 @@ DESCRIPTION
 _See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.13.0/src/commands/edge/drivers/uninstall.ts)_
 
 ## `smartthings edge:drivers:unpublish [DRIVERID]`
+[`Back to Commands`](#102)
 
 remove a driver from a channel
 
@@ -4537,6 +4640,7 @@ ALIASES
 ```
 
 ## `smartthings installedapps [ID]`
+[`Back to Commands`](#103)
 
 get a specific app or a list of apps
 
@@ -4566,6 +4670,7 @@ DESCRIPTION
 _See code: [src/commands/installedapps.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/installedapps.ts)_
 
 ## `smartthings installedapps:delete [ID]`
+[`Back to Commands`](#104)
 
 delete the installed app instance
 
@@ -4591,6 +4696,7 @@ DESCRIPTION
 _See code: [src/commands/installedapps/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/installedapps/delete.ts)_
 
 ## `smartthings installedapps:rename [ID] [NAME]`
+[`Back to Commands`](#105)
 
 renamed an installed app instance
 
@@ -4621,6 +4727,7 @@ DESCRIPTION
 _See code: [src/commands/installedapps/rename.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/installedapps/rename.ts)_
 
 ## `smartthings installedschema [ID]`
+[`Back to Commands`](#106)
 
 get a specific schema connector instance or a list of instances
 
@@ -4650,6 +4757,7 @@ DESCRIPTION
 _See code: [src/commands/installedschema.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/installedschema.ts)_
 
 ## `smartthings installedschema:delete [ID]`
+[`Back to Commands`](#107)
 
 delete the installed schema connector instance
 
@@ -4675,6 +4783,7 @@ DESCRIPTION
 _See code: [src/commands/installedschema/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/installedschema/delete.ts)_
 
 ## `smartthings locations [IDORINDEX]`
+[`Back to Commands`](#108)
 
 list locations or get information for a specific Location
 
@@ -4701,6 +4810,7 @@ DESCRIPTION
 _See code: [src/commands/locations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/locations.ts)_
 
 ## `smartthings locations:create`
+[`Back to Commands`](#109)
 
 create a Location for a user
 
@@ -4727,6 +4837,7 @@ DESCRIPTION
 _See code: [src/commands/locations/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/locations/create.ts)_
 
 ## `smartthings locations:delete [ID]`
+[`Back to Commands`](#110)
 
 delete a location
 
@@ -4755,6 +4866,7 @@ EXAMPLES
 _See code: [src/commands/locations/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/locations/delete.ts)_
 
 ## `smartthings locations:rooms [IDORINDEX]`
+[`Back to Commands`](#111)
 
 list rooms or get information for a specific room
 
@@ -4786,6 +4898,7 @@ ALIASES
 _See code: [src/commands/locations/rooms.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/locations/rooms.ts)_
 
 ## `smartthings locations:rooms:create`
+[`Back to Commands`](#112)
 
 create a room
 
@@ -4816,6 +4929,7 @@ ALIASES
 _See code: [src/commands/locations/rooms/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/locations/rooms/create.ts)_
 
 ## `smartthings locations:rooms:delete [ID]`
+[`Back to Commands`](#113)
 
 delete a room
 
@@ -4843,6 +4957,7 @@ ALIASES
 _See code: [src/commands/locations/rooms/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/locations/rooms/delete.ts)_
 
 ## `smartthings locations:rooms:update [ID]`
+[`Back to Commands`](#114)
 
 update a room
 
@@ -4876,6 +4991,7 @@ ALIASES
 _See code: [src/commands/locations/rooms/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/locations/rooms/update.ts)_
 
 ## `smartthings locations:update [ID]`
+[`Back to Commands`](#115)
 
 update a location
 
@@ -4905,6 +5021,7 @@ DESCRIPTION
 _See code: [src/commands/locations/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/locations/update.ts)_
 
 ## `smartthings logout`
+[`Back to Commands`](#116)
 
 ```
 USAGE
@@ -4920,6 +5037,7 @@ FLAGS
 _See code: [src/commands/logout.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/logout.ts)_
 
 ## `smartthings organizations [ID]`
+[`Back to Commands`](#117)
 
 list all organizations the user belongs to
 
@@ -4946,6 +5064,7 @@ DESCRIPTION
 _See code: [src/commands/organizations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/organizations.ts)_
 
 ## `smartthings organizations:current`
+[`Back to Commands`](#118)
 
 return the currently active organization
 
@@ -4971,6 +5090,7 @@ DESCRIPTION
 _See code: [src/commands/organizations/current.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/organizations/current.ts)_
 
 ## `smartthings plugins`
+[`Back to Commands`](#119)
 
 List installed plugins.
 
@@ -4991,6 +5111,7 @@ EXAMPLES
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.0/src/commands/plugins/index.ts)_
 
 ## `smartthings plugins:install PLUGIN...`
+[`Back to Commands`](#120)
 
 Installs a plugin into the CLI.
 
@@ -5029,6 +5150,7 @@ EXAMPLES
 ```
 
 ## `smartthings plugins:inspect PLUGIN...`
+[`Back to Commands`](#121)
 
 Displays installation properties of a plugin.
 
@@ -5053,6 +5175,7 @@ EXAMPLES
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.0/src/commands/plugins/inspect.ts)_
 
 ## `smartthings plugins:install PLUGIN...`
+[`Back to Commands`](#122)
 
 Installs a plugin into the CLI.
 
@@ -5093,6 +5216,7 @@ EXAMPLES
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.0/src/commands/plugins/install.ts)_
 
 ## `smartthings plugins:link PLUGIN`
+[`Back to Commands`](#123)
 
 Links a plugin into the CLI for development.
 
@@ -5122,6 +5246,7 @@ EXAMPLES
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.0/src/commands/plugins/link.ts)_
 
 ## `smartthings plugins:uninstall PLUGIN...`
+[`Back to Commands`](#124)
 
 Removes a plugin from the CLI.
 
@@ -5145,6 +5270,7 @@ ALIASES
 ```
 
 ## `smartthings plugins:uninstall PLUGIN...`
+[`Back to Commands`](#125)
 
 Removes a plugin from the CLI.
 
@@ -5170,6 +5296,7 @@ ALIASES
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.0/src/commands/plugins/uninstall.ts)_
 
 ## `smartthings plugins:uninstall PLUGIN...`
+[`Back to Commands`](#126)
 
 Removes a plugin from the CLI.
 
@@ -5193,6 +5320,7 @@ ALIASES
 ```
 
 ## `smartthings plugins:update`
+[`Back to Commands`](#127)
 
 Update installed plugins.
 
@@ -5211,6 +5339,7 @@ DESCRIPTION
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.0/src/commands/plugins/update.ts)_
 
 ## `smartthings presentation PRESENTATIONID [MANUFACTURERNAME]`
+[`Back to Commands`](#128)
 
 query device presentation by vid
 
@@ -5258,6 +5387,7 @@ EXAMPLES
 _See code: [src/commands/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/presentation.ts)_
 
 ## `smartthings presentation:device-config PRESENTATIONID [MANUFACTURERNAME]`
+[`Back to Commands`](#129)
 
 query device config by presentationId
 
@@ -5286,6 +5416,7 @@ DESCRIPTION
 _See code: [src/commands/presentation/device-config.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/presentation/device-config.ts)_
 
 ## `smartthings presentation:device-config:create`
+[`Back to Commands`](#130)
 
 create a device config
 
@@ -5312,6 +5443,7 @@ DESCRIPTION
 _See code: [src/commands/presentation/device-config/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/presentation/device-config/create.ts)_
 
 ## `smartthings presentation:device-config:generate ID`
+[`Back to Commands`](#131)
 
 generate the default device configuration
 
@@ -5342,6 +5474,7 @@ DESCRIPTION
 _See code: [src/commands/presentation/device-config/generate.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/presentation/device-config/generate.ts)_
 
 ## `smartthings rooms [IDORINDEX]`
+[`Back to Commands`](#132)
 
 list rooms or get information for a specific room
 
@@ -5371,6 +5504,7 @@ ALIASES
 ```
 
 ## `smartthings rooms:create`
+[`Back to Commands`](#133)
 
 create a room
 
@@ -5399,6 +5533,7 @@ ALIASES
 ```
 
 ## `smartthings rooms:delete [ID]`
+[`Back to Commands`](#134)
 
 delete a room
 
@@ -5424,6 +5559,7 @@ ALIASES
 ```
 
 ## `smartthings rooms:update [ID]`
+[`Back to Commands`](#135)
 
 update a room
 
@@ -5455,6 +5591,7 @@ ALIASES
 ```
 
 ## `smartthings rules [IDORINDEX]`
+[`Back to Commands`](#136)
 
 get a specific rule
 
@@ -5483,6 +5620,7 @@ DESCRIPTION
 _See code: [src/commands/rules.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/rules.ts)_
 
 ## `smartthings rules:create`
+[`Back to Commands`](#137)
 
 create a rule
 
@@ -5510,6 +5648,7 @@ DESCRIPTION
 _See code: [src/commands/rules/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/rules/create.ts)_
 
 ## `smartthings rules:delete [ID]`
+[`Back to Commands`](#138)
 
 delete a rule
 
@@ -5534,6 +5673,7 @@ DESCRIPTION
 _See code: [src/commands/rules/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/rules/delete.ts)_
 
 ## `smartthings rules:execute [ID]`
+[`Back to Commands`](#139)
 
 execute a rule
 
@@ -5573,6 +5713,7 @@ EXAMPLES
 _See code: [src/commands/rules/execute.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/rules/execute.ts)_
 
 ## `smartthings rules:update [ID]`
+[`Back to Commands`](#140)
 
 update a rule
 
@@ -5603,6 +5744,7 @@ DESCRIPTION
 _See code: [src/commands/rules/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/rules/update.ts)_
 
 ## `smartthings schema [ID]`
+[`Back to Commands`](#141)
 
 list all ST Schema Apps currently available in a user account
 
@@ -5630,6 +5772,7 @@ DESCRIPTION
 _See code: [src/commands/schema.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/schema.ts)_
 
 ## `smartthings schema:authorize ARN`
+[`Back to Commands`](#142)
 
 authorize calls to your ST Schema Lambda function from SmartThings
 
@@ -5672,6 +5815,7 @@ EXAMPLES
 _See code: [src/commands/schema/authorize.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/schema/authorize.ts)_
 
 ## `smartthings schema:create`
+[`Back to Commands`](#143)
 
 create an ST Schema connector
 
@@ -5701,6 +5845,7 @@ DESCRIPTION
 _See code: [src/commands/schema/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/schema/create.ts)_
 
 ## `smartthings schema:delete [ID]`
+[`Back to Commands`](#144)
 
 delete the ST Schema connector
 
@@ -5724,6 +5869,7 @@ DESCRIPTION
 _See code: [src/commands/schema/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/schema/delete.ts)_
 
 ## `smartthings schema:regenerate [ID]`
+[`Back to Commands`](#145)
 
 Regenerate the clientId and clientSecret of the ST Schema connector. The previous values will be invalidated, which may affect existing installations.
 
@@ -5751,6 +5897,7 @@ DESCRIPTION
 _See code: [src/commands/schema/regenerate.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/@smartthings/cli@1.0.0-beta.7/packages/cli/src/commands/schema/regenerate.ts)_
 
 ## `smartthings schema:update [ID]`
+[`Back to Commands`](#146)
 
 update an ST Schema connector
 
